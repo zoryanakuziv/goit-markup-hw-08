@@ -1,0 +1,9 @@
+.header-container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.header-navigation-wrapper {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}

@@ -1,0 +1,16 @@
+%resetSettings {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+%listStyle {
+  list-style: none;
+}
+
+%visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

@@ -1,0 +1,36 @@
+.features {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.feateres-title {
+  @extend %visually-hidden;
+}
+.feature-icons {
+  width: 450px;
+  height: 120px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  align-items: center;
+  background-color: $secondary-background-color;
+}
+.feature-list .title {
+  margin-bottom: 10px;
+
+  color: $title-text-color;
+  font-weight: $bold-font-weight;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.feature-list .text {
+  color: $primary-text-color;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.feature-list li:not(:last-child) {
+  margin-bottom: 30px;
+}
