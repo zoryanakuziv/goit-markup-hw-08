@@ -8,8 +8,19 @@
     padding-bottom: 94px;
   }
 }
+.img {
+  max-width: 100%;
+  height: auto;
+}
 .team-image {
   display: block;
+  width: 450px;
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
 }
 .team-card {
   max-width: 450px;
@@ -57,40 +68,43 @@
 .team-item:not(:last-child) {
   margin-bottom: 30px;
 }
-@media screen and(min-width:768px) {
-  .team-item {
+
+.team-item {
+  @media screen and(min-width:768px) {
     width: calc((100%-60px) / 2);
   }
-  & :not(:nth-child(2n + 2)) {
-    margin-right: 30px;
-  }
-}
-@media screen and(min-width:1200px) {
-  .team-item {
+  @media screen and(min-width:1200px) {
     width: calc((100%-60px) / 4);
   }
-  &:not(:last-child) {
-    margin-right: 30px;
+  .team-item:not(:nth-child(2n + 2)) {
+    @media screen and(min-width:768px) {
+      margin-right: 30px;
+    }
   }
-}
-.social-icons {
-  @include centeredFlex;
-  & li:not(:last-child) {
-    margin-right: 10px;
+  .team-item:not(:last-child) {
+    @media screen and(min-width:1200px) {
+      margin-right: 30px;
+    }
   }
-}
-.social-icon-link {
-  @include socialLinkSet;
-  &:not(:last-child) {
-    margin-right: 10px;
+  .social-icons {
+    @include centeredFlex;
+    & li:not(:last-child) {
+      margin-right: 10px;
+    }
   }
-  @include centeredFlex;
-  @include transitionType(fill);
-  @include transitionType;
+  .social-icon-link {
+    @include socialLinkSet;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    @include centeredFlex;
+    @include transitionType(fill);
+    @include transitionType;
 
-  &:hover,
-  &:focus {
-    fill: $primary-white-color;
-    background-color: $accent-background-color;
+    &:hover,
+    &:focus {
+      fill: $primary-white-color;
+      background-color: $accent-background-color;
+    }
   }
 }

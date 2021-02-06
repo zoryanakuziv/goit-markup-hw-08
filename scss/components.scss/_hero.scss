@@ -2,6 +2,10 @@
   text-align: center;
   padding-top: 118px;
   padding-bottom: 118px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 .hero-title {
   margin-bottom: 30px;
@@ -21,10 +25,45 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero.jpg);
+    url(../images/hero_mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero-overlay {
+    background-image: url(../images/hero_mobile@2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-overlay {
+    height: 400px;
+    max-width: 768px;
+    background-image: url(../images/hero_tablet.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero-overlay {
+      background-image: url(../images/hero_tablet@2x.jpg);
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-overlay {
+    height: 600px;
+    max-width: 1600px;
+    background-image: url(../images/hero_desktop.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero-overlay {
+      background-image: url(../images/hero_desktop@2x.jpg);
+    }
+  }
 }
 .hero-button {
   padding: 10px 32px;

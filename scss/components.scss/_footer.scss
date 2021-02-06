@@ -3,6 +3,14 @@
   padding-bottom: 60px;
   background-color: $dark-background-color;
 }
+.footer-wrapper .logo {
+  @media screen and (max-width: 1199px) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
 .address {
   margin-top: 20px;
   text-align: center;
@@ -22,12 +30,13 @@
   text-decoration: none;
   cursor: pointer;
 }
-.footer-contacts .logo {
-  display: block;
-  text-align: center;
-}
+
 .join-us {
   margin-top: 60px;
+  @media screen and(min-width:768px) and (max-width: 1199px) {
+    margin-top: 5px;
+    margin-left: 165px;
+  }
 }
 .join-us-text {
   font-weight: $bold-font-weight;
@@ -71,6 +80,8 @@
 }
 .subscribe-input {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 450px;
   height: 50px;
   margin-top: 20px;
@@ -117,4 +128,88 @@
 }
 .subscribe-button-wrapper {
   @include centeredFlex;
+}
+@media screen and(min-width:768px) and (max-width: 1199px) {
+  .footer-contacts-wrapper {
+    display: flex;
+    margin-left: 61px;
+  }
+}
+@media screen and(min-width:1200px) {
+  .footer-wrapper {
+    display: flex;
+  }
+  .address {
+    display: flex;
+    flex-direction: column;
+  }
+  .address-contact {
+    margin-top: 9px;
+  }
+
+  .join-us {
+    margin-top: 12px;
+    margin-left: 70px;
+  }
+
+  .join-us-links {
+    display: flex;
+    margin-top: 20px;
+  }
+  .join-us-social-list {
+    display: flex;
+    align-items: center;
+  }
+  .join-us-social-list li:not(:last-child) {
+    margin-right: 10px;
+  }
+  .subscribe {
+    margin-top: 12px;
+    margin-left: 93px;
+  }
+  .subscribe-input {
+    width: 358px;
+    height: 50px;
+    margin-top: 20px;
+    margin-right: 7px;
+    padding: 15px 16px;
+
+    color: rgba(255, 255, 255, 0.6);
+    background-color: $dark-background-color;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  .subscribe-button {
+    width: 200px;
+    height: 50px;
+    border-style: none;
+    background-color: $accent-background-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    outline: transparent;
+    cursor: pointer;
+  }
+  .subscribe-button-text {
+    margin-right: 10px;
+    font-weight: $bold-font-weight;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: $primary-white-color;
+  }
+  .subscribe-button-icon {
+    fill: $primary-white-color;
+  }
+  .subscribe-button-wrapper {
+    @include centeredFlex;
+  }
 }

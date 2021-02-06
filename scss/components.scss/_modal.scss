@@ -1,0 +1,196 @@
+.modal {
+  position: absolute;
+  top: 94px;
+  left: 50%;
+
+  width: 450px;
+  height: 609px;
+  background-color: $primary-background-color;
+
+  transform: translateX(-50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and(min-width: 768px) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media screen and(min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+}
+.modal-closing-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 4px;
+
+  @include centeredFlex;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  fill: currentColor;
+  background-color: $primary-background-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  @include transitionType(fill);
+}
+.modal-closing-button:hover {
+  fill: $accent-color;
+}
+.modal-form {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  padding-top: 40px;
+  padding-right: 39px;
+  padding-bottom: 40px;
+  padding-left: 41px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal-call-to-action {
+  margin-bottom: 12px;
+  font-weight: $bold-font-weight;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $dark-background-color;
+}
+.modal-label {
+  display: flex;
+  flex-direction: column;
+}
+.modal-text {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+.modal-field {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  @include transitionType(border-color);
+}
+
+.modal-field-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+.modal-icon {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  transform: translateY(14px);
+
+  @include transitionType(fill);
+}
+.modal-field:focus-within + .modal-icon {
+  fill: $accent-color;
+}
+.modal-field:focus,
+.modal-textarea:focus {
+  outline: transparent;
+  border-color: $accent-color;
+}
+
+.modal-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  @include transitionType(border-color);
+  &::placeholder {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal-privacy {
+  @include centeredFlex;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+}
+.modal-privacy-link {
+  margin-left: 2px;
+  color: $accent-color;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.checkbox {
+  @extend %visually-hidden;
+}
+.modal-accept-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 9px;
+  border: 2px solid $title-text-color;
+
+  .checkbox:checked:focus + & {
+    background-image: url('../images/icon_accept.svg');
+    background-repeat: no-repeat;
+    background-color: $accent-background-color;
+    background-size: cover;
+    background-origin: border-box;
+    border: 2px solid $accent-color;
+    border-radius: 2px;
+  }
+  .checkbox:focus + & {
+    background-image: url('../images/icon_accept.svg');
+    background-repeat: no-repeat;
+    background-color: $accent-background-color;
+    background-size: cover;
+    background-origin: border-box;
+    border: 2px solid $accent-color;
+    border-radius: 2px;
+  }
+}
+.modal-submit-button {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+
+  border-style: none;
+  background-color: $accent-background-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  outline: transparent;
+  cursor: pointer;
+}
+.modal-submit-button-name {
+  font-weight: $bold-font-weight;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: $primary-white-color;
+}

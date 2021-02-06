@@ -1,4 +1,6 @@
 .logo {
+  display: block;
+  margin-right: 88px;
   font-family: Raleway;
   font-weight: $bold-font-weight;
   font-size: 24px;
@@ -6,6 +8,13 @@
   letter-spacing: 0.03em;
   text-decoration: none;
   color: $title-text-color;
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+    font-size: 26px;
+  }
 }
 .logo-first-part {
   color: $accent-color;

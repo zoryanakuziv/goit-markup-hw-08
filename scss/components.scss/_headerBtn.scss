@@ -1,0 +1,30 @@
+.header-button {
+  position: absolute;
+  top: 22px;
+  right: 23px;
+  z-index: 2;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline-color: transparent;
+  @include transitionType(fill);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  @media screen and(min-width:768px) {
+    display: none;
+  }
+}
+.header-button .icon-menu-close {
+  display: none;
+}
+.header-button.is-open .icon-menu-close {
+  display: block;
+}
+.header-button.is-open .icon-menu-open {
+  display: none;
+}

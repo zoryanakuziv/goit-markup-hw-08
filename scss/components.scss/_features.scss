@@ -1,6 +1,39 @@
 .features {
   padding-top: 60px;
   padding-bottom: 60px;
+  @media screen and(min-width:1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.feature-list {
+  @media screen and(min-width:768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.feature-item:not(:last-child) {
+  @media screen and(max-width:767px) {
+    margin-bottom: 30px;
+  }
+}
+.feature-item {
+  @media screen and(min-width:768px) and (max-width: 1199px) {
+    width: calc((100%-30px) / 2);
+  }
+  @media screen and(min-width:1200px) {
+    width: calc((100%-90px) / 4);
+  }
+}
+.feature-item:nth-child(-n + 2) {
+  @media screen and(min-width:768px) and (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
+}
+.feature-item:nth-child(2n + 1) {
+  @media screen and(min-width:768px) and (max-width: 1199px) {
+    margin-right: 30px;
+  }
 }
 .feateres-title {
   @extend %visually-hidden;
@@ -8,15 +41,20 @@
 .feature-icons {
   width: 450px;
   height: 120px;
+  margin-bottom: 30px;
   padding-top: 25px;
   padding-bottom: 25px;
-  margin-bottom: 30px;
   align-items: center;
   background-color: $secondary-background-color;
+  @media screen and(min-width:768px) {
+    width: 354px;
+  }
+  @media screen and(min-width:1200px) {
+    width: 270px;
+  }
 }
 .feature-list .title {
   margin-bottom: 10px;
-
   color: $title-text-color;
   font-weight: $bold-font-weight;
   font-size: 14px;
@@ -24,13 +62,13 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
+  @media screen and(min-width:768px) {
+    text-align: start;
+  }
 }
 .feature-list .text {
   color: $primary-text-color;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-}
-.feature-list li:not(:last-child) {
-  margin-bottom: 30px;
 }
