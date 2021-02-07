@@ -8,20 +8,12 @@
     padding-bottom: 94px;
   }
 }
-.img {
+.team-image {
   max-width: 100%;
   height: auto;
-}
-.team-image {
   display: block;
-  width: 450px;
-  @media screen and (min-width: 768px) {
-    width: 354px;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 270px;
-  }
 }
+
 .team-card {
   max-width: 450px;
   padding-top: 30px;
@@ -31,13 +23,11 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-
-  @media screen and(min-width:768px) {
-    max-width: 354px;
+  @media screen and (min-width: 768px) {
+    width: 354px;
   }
-  @media screen and(min-width:1200px) {
-    max-width: 270px;
-    padding-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    width: 270px;
   }
 }
 .team-name {
@@ -56,6 +46,9 @@
   text-align: center;
   letter-spacing: 0.03em;
 }
+.team-item:not(:last-child) {
+  margin-bottom: 30px;
+}
 .team-list {
   @media screen and(min-width:768px) {
     display: flex;
@@ -65,46 +58,49 @@
     flex-wrap: nowrap;
   }
 }
+
 .team-item:not(:last-child) {
-  margin-bottom: 30px;
+  @media screen and(min-width:1200px) {
+    margin-right: 30px;
+  }
 }
 
 .team-item {
   @media screen and(min-width:768px) {
-    width: calc((100%-60px) / 2);
+    width: 354px;
   }
   @media screen and(min-width:1200px) {
-    width: calc((100%-60px) / 4);
+    width: 270px;
   }
-  .team-item:not(:nth-child(2n + 2)) {
-    @media screen and(min-width:768px) {
-      margin-right: 30px;
-    }
+}
+.team-item:nth-child(-n + 2) {
+  @media screen and(min-width:768px) and (max-width: 1199px) {
+    margin-bottom: 30px;
   }
-  .team-item:not(:last-child) {
-    @media screen and(min-width:1200px) {
-      margin-right: 30px;
-    }
+}
+.team-item:nth-child(2n + 1) {
+  @media screen and(min-width:768px) and (max-width: 1199px) {
+    margin-right: 30px;
   }
-  .social-icons {
-    @include centeredFlex;
-    & li:not(:last-child) {
-      margin-right: 10px;
-    }
+}
+.social-icons {
+  @include centeredFlex;
+  & li:not(:last-child) {
+    margin-right: 10px;
   }
-  .social-icon-link {
-    @include socialLinkSet;
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
-    @include centeredFlex;
-    @include transitionType(fill);
-    @include transitionType;
+}
+.social-icon-link {
+  @include socialLinkSet;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  @include centeredFlex;
+  @include transitionType(fill);
+  @include transitionType;
 
-    &:hover,
-    &:focus {
-      fill: $primary-white-color;
-      background-color: $accent-background-color;
-    }
+  &:hover,
+  &:focus {
+    fill: $primary-white-color;
+    background-color: $accent-background-color;
   }
 }

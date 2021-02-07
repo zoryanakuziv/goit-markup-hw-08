@@ -4,12 +4,10 @@
   background-color: $dark-background-color;
 }
 .footer-wrapper .logo {
-  @media screen and (max-width: 1199px) {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 .address {
   margin-top: 20px;
@@ -33,7 +31,7 @@
 
 .join-us {
   margin-top: 60px;
-  @media screen and(min-width:768px) and (max-width: 1199px) {
+  @media screen and(min-width:768px) {
     margin-top: 5px;
     margin-left: 165px;
   }
@@ -72,7 +70,7 @@
   margin-top: 60px;
   font-weight: $bold-font-weight;
   font-size: 14px;
-  line-height: 1, 14;
+  line-height: 1.14;
   color: $primary-white-color;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -139,12 +137,22 @@
   .footer-wrapper {
     display: flex;
   }
-  .address {
+  .footer-contacts-wrapper {
+    display: flex;
+  }
+  .footer-contacts {
     display: flex;
     flex-direction: column;
   }
+  .footer-wrapper .logo {
+    margin-left: 0;
+  }
+  .address {
+    text-align: left;
+  }
   .address-contact {
     margin-top: 9px;
+    text-align: left;
   }
 
   .join-us {
@@ -154,7 +162,6 @@
 
   .join-us-links {
     display: flex;
-    margin-top: 20px;
   }
   .join-us-social-list {
     display: flex;
@@ -164,52 +171,16 @@
     margin-right: 10px;
   }
   .subscribe {
-    margin-top: 12px;
     margin-left: 93px;
   }
+  .subscribe-text {
+    margin-top: 12px;
+  }
   .subscribe-input {
-    width: 358px;
-    height: 50px;
-    margin-top: 20px;
-    margin-right: 7px;
-    padding: 15px 16px;
-
-    color: rgba(255, 255, 255, 0.6);
-    background-color: $dark-background-color;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-sizing: border-box;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-
-    &::placeholder {
-      font-size: 16px;
-      line-height: 1.25;
-      letter-spacing: 0.03em;
-      color: rgba(255, 255, 255, 0.6);
-    }
+    width: 354px;
   }
   .subscribe-button {
-    width: 200px;
-    height: 50px;
-    border-style: none;
-    background-color: $accent-background-color;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    outline: transparent;
-    cursor: pointer;
-  }
-  .subscribe-button-text {
-    margin-right: 10px;
-    font-weight: $bold-font-weight;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    color: $primary-white-color;
-  }
-  .subscribe-button-icon {
-    fill: $primary-white-color;
-  }
-  .subscribe-button-wrapper {
-    @include centeredFlex;
+    margin-top: 48px;
+    margin-left: 12px;
   }
 }

@@ -1,0 +1,12 @@
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $primary-background-color;
+  @media screen and (min-width: 1200px) {
+    padding-top: 100px;
+    padding-bottom: 94px;
+  }
+}
+.portfolio-header {
+  @extend %visually-hidden;
+}

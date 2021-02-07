@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Портфолио</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -13,44 +14,101 @@
   <body>
     <header class="header">
       <div class="container header-container">
-        <nav class="header-navigation">
-          <a href="./" class="logo"
-            ><span class="logo-first-part">Web</span>Studio</a
+        <a href="./" class="logo"
+          ><span class="logo-first-part">Web</span>Studio</a
+        >
+        <button
+          type="button"
+          class="header-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="24px"
+            height="16px"
+            aria-label="Переключатель мобильного меню"
           >
-          <ul class="site-nav">
-            <li class="site-nav-item">
-              <a class="site-nav-link" href="./">Студия</a>
-            </li>
-            <li class="site-nav-item">
-              <div class="current-wrapper">
-                <a class="site-nav-link current" href="./portfolio.html"
+            <use
+              class="icon-menu-close"
+              href="./images/symbol-defs.svg#icon-close-button"
+            ></use>
+            <use
+              class="icon-menu-open"
+              href="./images/symbol-defs.svg#icon-menu"
+            ></use>
+          </svg>
+        </button>
+        <div class="mobile-menu-container" id="header-menu-container" data-menu>
+          <nav class="mobile-navigation">
+            <ul class="mobile-navigation-list">
+              <li><a class="mobile-navigation-link" href="./">Студия</a></li>
+              <li>
+                <a
+                  class="mobile-navigation-link current"
+                  href="./portfolio.html"
                   >Портфолио</a
                 >
-              </div>
+              </li>
+              <li><a class="mobile-navigation-link" href="">Контакты</a></li>
+            </ul>
+          </nav>
+          <a class="mobile-contact-link" href="tel:+380961111111">
+            +38 096 111 11 11</a
+          >
+          <a class="mobile-email-link" href="mailto:info@devstudio.com">
+            info@devstudio.com</a
+          >
+          <ul class="mobile-social-list">
+            <li class="mobile-social-item">
+              <a class="mobile-social-link" href="">Instagram </a>
             </li>
-            <li class="site-nav-item">
-              <a class="site-nav-link" href="">Контакты</a>
+            <li class="mobile-social-item">
+              <a class="mobile-social-link" href="">Twitter </a>
+            </li>
+            <li class="mobile-social-item">
+              <a class="mobile-social-link" href="">Facebook </a>
+            </li>
+            <li class="mobile-social-item">
+              <a class="mobile-social-link" href="">LinkedIn</a>
             </li>
           </ul>
-        </nav>
-        <ul class="contact-nav">
-          <li class="contact-nav-item">
-            <a class="contact-nav-link" href="mailto:info@devstudio.com">
-              <svg class="contact-nav-icon" width="16px" height="12px">
-                <use href="./images/symbol-defs.svg#icon-envelope-2"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contact-nav-item">
-            <a class="contact-nav-link" href="tel:+380961111111">
-              <svg class="contact-nav-icon" width="10px" height="16px">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
+        <div class="header-navigation-wrapper">
+          <nav class="header-navigation">
+            <ul class="site-nav">
+              <li class="site-nav-item">
+                <a class="site-nav-link current" href="./">Студия</a>
+              </li>
+              <li class="site-nav-item">
+                <div class="current-wrapper">
+                  <a class="site-nav-link" href="./portfolio.html">Портфолио</a>
+                </div>
+              </li>
+              <li class="site-nav-item">
+                <a class="site-nav-link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contact-nav">
+            <li class="contact-nav-item">
+              <a class="contact-nav-link" href="mailto:info@devstudio.com">
+                <svg class="contact-nav-icon" width="16px" height="12px">
+                  <use href="./images/symbol-defs.svg#icon-envelope-2"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="contact-nav-item">
+              <a class="contact-nav-link" href="tel:+380961111111">
+                <svg class="contact-nav-icon" width="10px" height="16px">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -81,12 +139,31 @@
               <li class="card-set-item">
                 <a class="card-set-link" href="">
                   <div class="card-set-image-wrapper">
+                    <picture>
+                <source srcset="
+                ./images/portfolio_card_1_mobile.jpg 1x,
+                ./images/portfolio_card_1_mobile@2x.jpg 2x,
+                " 
+                media="(max-width:767px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_1_tablet.jpg 1x,
+                ./images/portfolio_card_1_tablet@2x.jpg 2x,
+                " 
+                media="(min-width:768px) and (max-width:1199px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_1_desktop.jpg 1x,
+                ./images/portfolio_card_1_desktop@2x.jpg 2x,
+                " 
+                media="(min-width:1200px)"
+                type="image/jpg">
                     <img
                       class="card-set-image"
-                      src="./images/portfolio_card_1.jpg"
+                      src="./images/portfolio_card_1_desktop.jpg"
                       alt="Открытый ноутбук"
-                      width="370px"
                     />
+                     </picture>
                     <div class="card-set-overlay">
                       <p>
                         Технокряк это современная площадка распространения
@@ -105,11 +182,31 @@
               <li class="card-set-item">
                 <a class="card-set-link" href="">
                   <div class="card-set-image-wrapper">
+                     <picture>
+                    <source srcset="
+                ./images/portfolio_card_2_mobile.jpg 1x,
+                ./images/portfolio_card_2_mobile@2x.jpg 2x,
+                " 
+                media="(max-width:767px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_2_tablet.jpg 1x,
+                ./images/portfolio_card_2_tablet@2x.jpg 2x,
+                " 
+                media="(min-width:768px) and (max-width:1199px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_2_desktop.jpg 1x,
+                ./images/portfolio_card_2_desktop@2x.jpg 2x,
+                " 
+                media="(min-width:1200px)"
+                type="image/jpg">
                     <img
                       class="card-set-image"
-                      src="./images/portfolio_card_2.jpg"
+                      src="./images/portfolio_card_2_desktop.jpg"
                       alt="Два баскетболиста во время игры"
                     />
+                  </picture>
                     <div class="card-set-overlay">
                       <p>
                         Технокряк это современная площадка распространения
@@ -130,11 +227,31 @@
               <li class="card-set-item">
                 <a class="card-set-link" href="">
                   <div class="card-set-image-wrapper">
+                    <picture>
+                <source srcset="
+                ./images/portfolio_card_3_mobile.jpg 1x,
+                ./images/portfolio_card_3_mobile@2x.jpg 2x,
+                " 
+                media="(max-width:767px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_3_tablet.jpg 1x,
+                ./images/portfolio_card_3_tablet@2x.jpg 2x,
+                " 
+                media="(min-width:768px) and (max-width:1199px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_3_desktop.jpg 1x,
+                ./images/portfolio_card_3_desktop@2x.jpg 2x,
+                " 
+                media="(min-width:1200px)"
+                type="image/jpg">
                     <img
                       class="card-set-image"
-                      src="./images/portfolio_card_3.jpg"
+                      src="./images/portfolio_card_3_desktop.jpg"
                       alt="Логотип ресторана"
                     />
+                    </picture>
                     <div class="card-set-overlay">
                       <p>
                         Технокряк это современная площадка распространения
@@ -153,11 +270,31 @@
               <li class="card-set-item">
                 <a class="card-set-link" href="">
                   <div class="card-set-image-wrapper">
+                    <picture>
+                <source srcset="
+                ./images/portfolio_card_4_mobile.jpg 1x,
+                ./images/portfolio_card_4_mobile@2x.jpg 2x,
+                " 
+                media="(max-width:767px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_4_tablet.jpg 1x,
+                ./images/portfolio_card_4_tablet@2x.jpg 2x,
+                " 
+                media="(min-width:768px) and (max-width:1199px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_4_desktop.jpg 1x,
+                ./images/portfolio_card_4_desktop@2x.jpg 2x,
+                " 
+                media="(min-width:1200px)"
+                type="image/jpg">
                     <img
                       class="card-set-image"
-                      src="./images/portfolio_card_4.jpg"
+                      src="./images/portfolio_card_4_desktop.jpg"
                       alt="Наушники"
                     />
+                    </picture>
                     <div class="card-set-overlay">
                       <p>
                         Технокряк это современная площадка распространения
@@ -176,11 +313,31 @@
               <li class="card-set-item">
                 <a class="card-set-link" href="">
                   <div class="card-set-image-wrapper">
+                    <picture>
+                <source srcset="
+                ./images/portfolio_card_5_mobile.jpg 1x,
+                ./images/portfolio_card_5_mobile@2x.jpg 2x,
+                " 
+                media="(max-width:767px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_5_tablet.jpg 1x,
+                ./images/portfolio_card_5_tablet@2x.jpg 2x,
+                " 
+                media="(min-width:768px) and (max-width:1199px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_5_desktop.jpg 1x,
+                ./images/portfolio_card_5_desktop@2x.jpg 2x,
+                " 
+                media="(min-width:1200px)"
+                type="image/jpg">
                     <img
                       class="card-set-image"
-                      src="./images/portfolio_card_5.jpg"
+                      src="./images/portfolio_card_5_desktop.jpg"
                       alt="Две коробки"
                     />
+                   </picture>
                     <div class="card-set-overlay">
                       <p>
                         Технокряк это современная площадка распространения
@@ -199,11 +356,31 @@
               <li class="card-set-item">
                 <a class="card-set-link" href="">
                   <div class="card-set-image-wrapper">
+                    <picture>
+                <source srcset="
+                ./images/portfolio_card_6_mobile.jpg 1x,
+                ./images/portfolio_card_6_mobile@2x.jpg 2x,
+                " 
+                media="(max-width:767px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_6_tablet.jpg 1x,
+                ./images/portfolio_card_6_tablet@2x.jpg 2x,
+                " 
+                media="(min-width:768px) and (max-width:1199px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_6_desktop.jpg 1x,
+                ./images/portfolio_card_6_desktop@2x.jpg 2x,
+                " 
+                media="(min-width:1200px)"
+                type="image/jpg">
                     <img
                       class="card-set-image"
-                      src="./images/portfolio_card_6.jpg"
+                      src="./images/portfolio_card_6_desktop.jpg"
                       alt="Монитор с открытой страницей веб сайта"
                     />
+                    </picture>
                     <div class="card-set-overlay">
                       <p>
                         Технокряк это современная площадка распространения
@@ -222,11 +399,31 @@
               <li class="card-set-item">
                 <a class="card-set-link" href="">
                   <div class="card-set-image-wrapper">
+                    <picture>
+                <source srcset="
+                ./images/portfolio_card_7_mobile.jpg 1x,
+                ./images/portfolio_card_7_mobile@2x.jpg 2x,
+                " 
+                media="(max-width:767px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_7_tablet.jpg 1x,
+                ./images/portfolio_card_7_tablet@2x.jpg 2x,
+                " 
+                media="(min-width:768px) and (max-width:1199px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_7_desktop.jpg 1x,
+                ./images/portfolio_card_7_desktop@2x.jpg 2x,
+                " 
+                media="(min-width:1200px)"
+                type="image/jpg">
                     <img
                       class="card-set-image"
-                      src="./images/portfolio_card_7.jpg"
+                      src="./images/portfolio_card_7_desktop.jpg"
                       alt="Открытый журнал"
                     />
+                   </picture>
                     <div class="card-set-overlay">
                       <p>
                         Технокряк это современная площадка распространения
@@ -245,11 +442,31 @@
               <li class="card-set-item">
                 <a class="card-set-link" href="">
                   <div class="card-set-image-wrapper">
+                    <picture>
+                <source srcset="
+                ./images/portfolio_card_8_mobile.jpg 1x,
+                ./images/portfolio_card_8_mobile@2x.jpg 2x,
+                " 
+                media="(max-width:767px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_8_tablet.jpg 1x,
+                ./images/portfolio_card_8_tablet@2x.jpg 2x,
+                " 
+                media="(min-width:768px) and (max-width:1199px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_8_desktop.jpg 1x,
+                ./images/portfolio_card_8_desktop@2x.jpg 2x,
+                " 
+                media="(min-width:1200px)"
+                type="image/jpg">
                     <img
                       class="card-set-image"
-                      src="./images/portfolio_card_8.jpg"
+                      src="./images/portfolio_card_8_desktop.jpg"
                       alt="Этикетка на подвеске"
                     />
+                   </picture>
                     <div class="card-set-overlay">
                       <p>
                         Технокряк это современная площадка распространения
@@ -268,11 +485,31 @@
               <li class="card-set-item">
                 <a class="card-set-link" href="">
                   <div class="card-set-image-wrapper">
+                    <picture>
+                <source srcset="
+                ./images/portfolio_card_9_mobile.jpg 1x,
+                ./images/portfolio_card_9_mobile@2x.jpg 2x,
+                " 
+                media="(max-width:767px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_9_tablet.jpg 1x,
+                ./images/portfolio_card_9_tablet@2x.jpg 2x,
+                " 
+                media="(min-width:768px) and (max-width:1199px)"
+                type="image/jpg">
+                <source srcset="
+                ./images/portfolio_card_9_desktop.jpg 1x,
+                ./images/portfolio_card_9_desktop@2x.jpg 2x,
+                " 
+                media="(min-width:1200px)"
+                type="image/jpg">
                     <img
                       class="card-set-image"
-                      src="./images/portfolio_card_9.jpg"
+                      src="./images/portfolio_card_9_desktop.jpg"
                       alt="Человек работает на ноутбуке"
                     />
+                   </picture>
                     <div class="card-set-overlay">
                       <p>
                         Технокряк это современная площадка распространения
@@ -293,10 +530,11 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="container">
+     <footer class="footer">
+      <div class="container footer-container">
         <div class="footer-wrapper">
-          <div>
+          <div class="footer-contacts-wrapper">
+          <div class="footer-contacts">
             <a class="logo" href="./"
               ><span class="logo-first-part">Web</span
               ><span class="logo-second-part">Studio</span></a
@@ -346,6 +584,7 @@
               </ul>
             </div>
           </div>
+          </div>
           <div class="subscribe">
             <p class="subscribe-text">Подпишитесь на рассылку</p>
             <form>
@@ -357,6 +596,7 @@
                   placeholder="E-mail"
                 />
               </label>
+            </div>
               <button class="subscribe-button" type="submit">
                 <div class="subscribe-button-wrapper">
                   <span class="subscribe-button-text">Подписаться</span>
@@ -366,9 +606,9 @@
                 </div>
               </button>
             </form>
-          </div>
         </div>
       </div>
     </footer>
+    <script src="./js/menuBtn.js"></script>
   </body>
 </html>
