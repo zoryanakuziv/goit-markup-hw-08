@@ -372,12 +372,10 @@ h2 {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .header {
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #ececec;
-  }
+.header {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ececec;
 }
 
 .logo {
@@ -919,6 +917,12 @@ h2 {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .join-us-text {
+    text-align: left;
+  }
+}
+
 .join-us-social-list {
   display: flex;
   justify-content: center;
@@ -957,6 +961,12 @@ h2 {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-text {
+    text-align: left;
+  }
 }
 
 .subscribe-input {
@@ -1031,6 +1041,7 @@ h2 {
     display: flex;
   }
   .footer-contacts {
+    width: 231px;
     display: flex;
     flex-direction: column;
   }
@@ -1065,7 +1076,7 @@ h2 {
     margin-top: 12px;
   }
   .subscribe-input {
-    width: 354px;
+    width: 358px;
   }
   .subscribe-button {
     margin-top: 48px;
@@ -1581,13 +1592,18 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .filter-list {
+    margin-bottom: 25px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .filter-list {
     justify-content: center;
-    margin-bottom: 6px;
+    margin-bottom: 30px;
   }
 }
 
@@ -1597,18 +1613,17 @@ h2 {
   }
 }
 
-.filter-item {
-  margin-bottom: 15px;
-}
-
-@media screen and (min-width: 768px) {
-  .filter-item + .filter-item {
+@media screen and (max-width: 767px) {
+  .filter-item {
+    margin-bottom: 15px;
+  }
+  .filter-item:not(:nth-child(3n + 1)) {
     margin-left: 8px;
   }
 }
 
-@media screen and (max-width: 767px) {
-  .filter-item:not(:nth-child(3n + 1)) {
+@media screen and (min-width: 768px) {
+  .filter-item + .filter-item {
     margin-left: 8px;
   }
 }

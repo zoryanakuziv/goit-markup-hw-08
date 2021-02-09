@@ -44,6 +44,9 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
+  @media screen and(min-width:1200px) {
+    text-align: left;
+  }
 }
 .join-us-social-list {
   display: flex;
@@ -75,6 +78,9 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
+  @media screen and(min-width:1200px) {
+    text-align: left;
+  }
 }
 .subscribe-input {
   display: block;
@@ -141,6 +147,7 @@
     display: flex;
   }
   .footer-contacts {
+    width: 231px;
     display: flex;
     flex-direction: column;
   }
@@ -177,7 +184,7 @@
     margin-top: 12px;
   }
   .subscribe-input {
-    width: 354px;
+    width: 358px;
   }
   .subscribe-button {
     margin-top: 48px;
